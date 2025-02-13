@@ -1,0 +1,4 @@
+<!-- sample rectangle -->
+        <svg class="asteroid-2-md" width="48" height="46" viewBox="0 0 48 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.5 1L1 26.5L19 44.5L38.5 40L47 21.5L38.5 8.5L21.5 1H9.5ZM6 26.5L12.5 5H21.5L35.5 10.5L42.5 21.5L35.5 36.5L18 40L6 26.5Z" fill="#D9D9D9" stroke="#FF9C40"/>
+        </svg>

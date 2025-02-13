@@ -1,0 +1,595 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter Tight;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --intro-bg: #161616;
+    --intro-h1: #FF9C40;
+
+    --hero-dark-navText: white;
+    --hero-dark-h1: var(--intro-h1);
+    --hero-dark-span: white;
+    --hero-light-navText: black;
+    --hero-light-h1: #4053FF;
+    --hero-dark-span: black;
+
+    --landing-dark-bg: var(--intro-bg);
+    --landing-light-bg: white;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+
+.intro-container{
+    background-color: var(--intro-bg);
+    height: 100vh;
+    width: 100vw;
+    color: var(--intro-h1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    z-index: 10000;
+    /* border: 1px solid red; */
+}
+
+/* Main Page */
+
+.hero-wrapper {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.sun {
+    /* border: 1px solid red; */
+    width: auto;
+    height: auto;
+    scale: .7;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* Landing Dark Mode */
+
+.landing-dark {
+    background-color: var(--intro-bg);
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    scroll-snap-align: center;
+    border: 1px solid transparent;
+}
+
+.header-dark {
+    width: 20vw;
+    height: auto;
+    display: flex;
+    justify-content: start;
+    gap: .5rem;
+    margin-left: 3rem;
+    padding-top: 1rem;
+    position: sticky;
+}
+
+.header-dark a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--hero-dark-navText);
+}
+
+.header-dark img {
+    cursor: pointer;
+}
+
+.asteroid-1-lg, .light-asteroid-1-lg {
+    position: absolute;
+    right: 35%;
+    top: -1%;
+    scale: .8;
+    animation: asteroid-bob-right 4s  ease-in-out infinite alternate;
+}
+
+.asteroid-1-md, .light-asteroid-1-md {
+    position: absolute;
+    top: 17%;
+    right: 34%;
+    scale: .7;
+    animation: asteroid-bob-left 2.5s ease-in-out infinite alternate;
+}
+
+.asteroid-1-sm, .light-asteroid-1-sm {
+    position: absolute;
+    top: 25%;
+    right: 42%;
+    scale: .6;
+    animation: asteroid-bob-right 1.5s  ease-in-out infinite alternate;
+}
+
+.asteroid-2-lg, .light-asteroid-2-lg {
+    position: absolute;
+    top: 32%;
+    right: 34%;
+    animation: asteroid-bob-left 3.5s ease-in-out infinite alternate;
+    z-index: 1;
+}
+
+.asteroid-2-md, .light-asteroid-2-md {
+    position: absolute;
+    top: 51%;
+    right: 39%;
+    scale: .7;
+    animation: asteroid-bob-vertical 1.5s ease-in-out infinite alternate;
+}
+
+.asteroid-2-covered, .light-asteroid-2-covered {
+    position: absolute;
+    scale: 2;
+    top: 57%;
+    right: 32%;
+    animation: asteroid-bob-right 2s ease-in-out infinite alternate;
+}
+
+.asteroid-3-lg, .light-asteroid-3-lg {
+    position: absolute;
+    bottom: 26%;
+    right: 21%;
+    scale: 1.3;
+    animation: asteroid-bob-left 3.8s ease-in-out infinite alternate;
+}
+
+.asteroid-3-sm, .light-asteroid-3-sm {
+    position: absolute;
+    bottom: 12%;
+    right: 18%;
+    animation: asteroid-bob-vertical 2s ease-in-out infinite alternate;
+}
+
+@keyframes asteroid-bob-right {
+    0% {
+        transform: translateY(-5%);
+        transform: translateX(-10%);
+    }
+    100%{
+        transform: translateY(5%);
+        rotate: 4deg;
+    }
+}
+@keyframes asteroid-bob-left {
+    0% {
+        transform: translateY(-5%);
+        transform: translateX(-10%);
+    }
+    100%{
+        transform: translateY(5%);
+        rotate: -4deg;
+    }
+}
+@keyframes asteroid-bob-vertical {
+    0% {
+        transform: translateY(-10%);
+    }
+    100%{
+        transform: translateY(10%);
+    }
+}
+
+.arrow-dark {
+    position: absolute;
+    margin-left: 2rem;
+    bottom: 2rem;
+    scale: .8;
+}
+
+.greeter {
+    /* border: 1px solid red; */
+    width: 20rem;
+    aspect-ratio: 1;
+    z-index: 1;
+    position: relative;
+    top: 15%;
+    left: 12%;
+    display: flex;
+    flex-direction: column;
+}
+
+.greeter h1, span {
+    font-size: 4rem;
+}
+
+.greeter h1 {
+    color: var(--intro-h1);
+}
+
+.greeter span, .greeter > h3{
+    color: white;
+    padding-top: .5rem;
+}
+
+
+.lang-logos {
+    margin-top: 1rem;
+    width: auto;
+    height: auto;
+    /* border: 1px solid red; */
+    display: flex;
+    z-index: 1;
+    gap: .5rem;
+}
+
+.lang-logos img {
+    width: 3.5rem;
+}
+
+.dark-bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    scale: 1.5;
+    left: 32%;
+    bottom: 28%;
+}
+
+/* End of Landing Dark Mode */
+
+
+/* Landing Light Mode */
+.landing-light{
+    background-color: var(--landing-light-bg);
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    border: 1px solid transparent;
+}
+
+.header-light {
+    width: 20vw;
+    height: auto;
+    display: flex;
+    justify-content: start;
+    gap: .5rem;
+    margin-left: 3rem;
+    padding-top: 1rem;
+    position: sticky;
+}
+
+.header-light a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--hero-light-navText);
+    z-index: 1;
+}
+
+.arrow-light {
+    position: absolute;
+    margin-left: 2rem;
+    bottom: 2rem;
+    scale: .8;
+    z-index: 1;
+}
+
+.greeter-light {
+    /* border: 1px solid red; */
+    width: 20rem;
+    aspect-ratio: 1;
+    position: relative;
+    top: 15%;
+    left: 12%;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.greeter-light h1, span {
+    font-size: 4rem;
+    z-index: 1;
+}
+
+.greeter-light h1 {
+    color: var(--hero-light-h1);
+}
+
+.greeter-light span, h3{
+    color: black;
+    padding-top: .5rem;
+    z-index: 1;
+}
+
+.light-bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    scale: 1.5;
+    left: 32%;
+    bottom: 28%;
+}
+
+/* General Projects Page */
+
+.projects-page {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+.project-bg-planet {
+    position: absolute;
+    top: 20%;
+    left: -10%;
+    scale: .8;
+    z-index: 1;
+}
+.project-cards-container {
+    height: 100%;
+    width: 40%;
+    z-index: 2;
+    border: 1px solid red;
+    position: relative;
+    left: 50%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+
+}
+.cards {
+    border: 1px solid yellow;
+    background-color: var(--intro-bg);
+    z-index: 2;
+    grid-column: 1/7;
+}
+.cards h3 {
+    color: white;
+}
+/* Project Dark */
+.projects-dark {
+    height: 100%;
+    width: 100%;
+    scroll-snap-align: center;
+    background-color: var(--intro-bg);
+    position: relative;
+}
+
+/* Project Light */
+.projects-light {
+    height: 100%;
+    width: 100%;
+    scroll-snap-align: center;
+    background-color: white;
+    position: relative;
+}
+
+
+/* Contact Page */
+.contact-page {
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Tablet Formatting */
+@media screen and (max-width: 1280px) {
+    .header-dark, .header-light {
+        width: auto;
+        height: auto;
+        display: flex;
+        justify-content: start;
+        position: sticky;
+        /* border: 1px solid red; */
+        padding: 1rem auto;
+        margin: auto;
+    }
+
+    .header-dark a, .header-light a {
+        font-size: 2rem;
+        padding-left: 1rem;
+    }
+    .header-dark .sun, .header-light .sun {
+        scale: 1.2;
+    }
+    .dark-bg, .light-bg {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        scale: 1.35;
+        left: 30%;
+        bottom: -15%;
+    }
+    .asteroid-1-lg, .light-asteroid-1-lg {
+        position: absolute;
+        right: 14%;
+        top: 35%;
+        scale: .6;
+        animation: asteroid-bob-right 4s  ease-in-out infinite alternate;
+    }
+    
+    .asteroid-1-md, .light-asteroid-1-md {
+        position: absolute;
+        top: 45%;
+        right: 15%;
+        scale: .5;
+        animation: asteroid-bob-left 2.5s ease-in-out infinite alternate;
+    }
+    
+    .asteroid-1-sm, .light-asteroid-1-sm {
+        position: absolute;
+        scale: .6;
+        top: 44rem;
+        right: 18rem;
+        animation: asteroid-bob-right 1.5s  ease-in-out infinite alternate;
+    }
+    
+    .asteroid-2-lg, .light-asteroid-2-lg {
+        position: absolute;
+        top: 47rem;
+        right: 11rem;
+        animation: asteroid-bob-left 2.8s ease-in-out infinite alternate;
+        scale: .7;
+        z-index: 1;
+    }
+    
+    .asteroid-2-md, .light-asteroid-2-md {
+        position: absolute;
+        top: 49rem;
+        right: 19rem;
+        scale: .7;
+        animation: asteroid-bob-vertical 1.5s ease-in-out infinite alternate;
+    }
+    
+    .asteroid-2-covered, .light-asteroid-2-covered {
+        position: absolute;
+        scale: 1;
+        top: 54rem;
+        right: 10rem;
+        animation: asteroid-bob-right 2s ease-in-out infinite alternate;
+    }
+    
+    .asteroid-3-lg, .light-asteroid-3-lg {
+        position: absolute;
+        bottom: 5rem;
+        right: 11rem;
+        scale: .9;
+        animation: asteroid-bob-left 3.8s ease-in-out infinite alternate;
+    }
+    
+    .asteroid-3-sm, .light-asteroid-3-sm {
+        position: absolute;
+        bottom: 8rem;
+        right: 25rem;
+        animation: asteroid-bob-vertical 2s ease-in-out infinite alternate;
+    }
+}
+/* End of Tablet Formatting */
+
+/* Mobile Formatting */
+@media screen and (max-width: 480px) {
+    .intro-container {
+        background-color: var(--intro-bg);
+        height: 100vh;
+        width: 100vw;
+        color: var(--intro-h1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.5rem;
+        z-index: 10000;
+        /* border: 1px solid red; */
+    }
+    .header-dark, .header-light {
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        position: sticky;
+        /* border: 1px solid red; */
+        padding-top: 1rem;
+    }
+    .header-dark a, .header-light a {
+        font-size: 1.5rem;
+    }
+    .header-dark .sun, .header-light .sun {
+        scale: .8;
+    }
+    .arrow-dark, .arrow-light {
+        position: absolute;
+        margin-left: 0rem;
+        bottom: -13%;
+        scale: .6;
+        z-index: 1;
+    }
+    .dark-bg, .light-bg {
+        position: absolute;
+        height: 100vh;
+        scale: 1;
+        bottom: -25%;
+    }
+    .asteroid-1-lg, .light-asteroid-1-lg {
+        position: absolute;
+        right: 12%;
+        top: 2%;
+        scale: .4;
+        animation: asteroid-bob-right 4s  ease-in-out infinite alternate;
+    }
+    
+    .asteroid-1-md, .light-asteroid-1-md {
+        position: absolute;
+        top: 5%;
+        right: 9%;
+        scale: .2;
+        animation: asteroid-bob-left 1.2s ease-in-out infinite alternate;
+    }
+    
+    .asteroid-1-sm, .light-asteroid-1-sm {
+        position: absolute;
+        scale: .6;
+        top: 24%;
+        right: 19%;
+        animation: asteroid-bob-right 1.5s  ease-in-out infinite alternate;
+    }
+    
+    .asteroid-2-lg, .light-asteroid-2-lg {
+        position: absolute;
+        top: 65%;
+        right: 31%;
+        scale: .6;
+        animation: asteroid-bob-left 3.5s ease-in-out infinite alternate;
+        z-index: 1;
+    }
+    
+    .asteroid-2-md, .light-asteroid-2-md {
+        display: none;
+    }
+    
+    .asteroid-2-covered, .light-asteroid-2-covered {
+        display: none;
+    }   
+    
+    .asteroid-3-lg, .light-asteroid-3-lg {
+        display: none;
+    }
+    
+    .asteroid-3-sm, .light-asteroid-3-sm {
+        top: 75%;
+        right: 52%;
+        scale: .6;
+    }
+}
+
+/* Smallest width formatting */
+@media screen and (max-width: 355px){
+    .greeter, .greeter-light {
+        scale: clamp(.4, .8, .9);
+    }
+}
+
+
+/* Hidden */
+.hidden {
+    display: none;
+    height: 0px;
+    width: 0px;
+}
+/* Hidden */
+
+/* Prevent Select */
+.prevent-select {
+    user-select: none;
+    -webkit-user-select: none;
+}
+/* Prevent Select */
