@@ -1,5 +1,5 @@
 Set all the asteroids to % to increase flexibility
 
-Set up lightmode
-
 JS todo list
+
+fix grid project cards
