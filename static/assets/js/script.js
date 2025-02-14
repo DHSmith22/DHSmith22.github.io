@@ -81,24 +81,5 @@ function toggleLight() {
 }
 
 // Scroll Fading Effect
-window.addEventListener("scroll", function () {
-    const landingPage = document.getElementById("landing-page");
-    const projectsPage = document.getElementById("projects-page");
-
-    if (projectsPage) {
-        const projectTop = projectsPage.offsetTop;
-        const scrollY = window.scrollY;
-        const fadeStart = projectTop - window.innerHeight * 0.3; // Start fading at 50% viewport before projects-page
-        const fadeEnd = projectTop; // Fully faded at the start of projects-page
-
-        if (scrollY >= fadeStart) {
-            let opacity = Math.max(0, 1 - (scrollY - fadeStart) / (fadeEnd - fadeStart));
-            landingPage.style.opacity = opacity;
-            landingPage.style.background = 'var(--intro-bg)';
-        } else {
-            landingPage.style.opacity = 1; // Reset opacity when scrolling back up
-        }
-    }
-});
 
 // project-page background star animation

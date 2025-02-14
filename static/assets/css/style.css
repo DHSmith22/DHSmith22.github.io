@@ -58,7 +58,6 @@ body {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
-    transition: opacity 0.5s ease-in-out;
 }
 .sun {
     /* border: 1px solid red; */
