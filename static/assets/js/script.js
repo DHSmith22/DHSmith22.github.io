@@ -6,6 +6,10 @@ document.addEventListener("DOMContentLoaded", function(){
     const contactPage = document.querySelector('.contact-page');
 
     setTimeout(() => {
+        projectsPage.classList.add('hidden');
+        contactPage.classList.add('hidden');
+        heroWrapper.classList.add('hidden');
+        introWrapperText.style.transition = '.35s';
         introWrapperText.innerHTML="Hej";
     }, 500);
     setTimeout(() => {
@@ -45,17 +49,21 @@ document.addEventListener("DOMContentLoaded", function(){
         introWrapperText.innerHTML="Hello";
     }, 2500);
     setTimeout(() => {
+        introWrapperText.style.scale = '1.5';
+    }, 2600);
+    setTimeout(() => {
+        introWrapperText.style.scale = '1'
+        introWrapperText.style.opacity = '0'
+        heroWrapper.classList.remove('hidden');
         heroWrapper.scrollIntoView({behavior: 'smooth'});
-    }, 3000);
+    }, 3500);
     setTimeout(() => {
         introContainer.classList.add('hidden');
-        projectsPage.classList.add('hidden');
-        contactPage.classList.add('hidden');
-    }, 3500);
+    }, 4000);
     setTimeout(() => {
        projectsPage.classList.remove('hidden');
        contactPage.classList.remove('hidden');
-    }, 3750);
+    }, 4250);
 });
 
 // Dark mode Toggle

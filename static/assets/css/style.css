@@ -20,8 +20,11 @@ html {
     --hero-light-h1: #4053FF;
     --hero-dark-span: black;
 
-    --landing-dark-bg: var(--intro-bg);
+    --landing-dark-bg: #161616;
     --landing-light-bg: white;
+
+    --opacity-bg-light: rgba(255, 255, 255, 0.25);
+    --opacity-bg-dark: rgba(0, 0, 0, 0.25);
 }
 
 ::-webkit-scrollbar {
@@ -327,42 +330,38 @@ body {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
-}
-.project-bg-planet {
-    position: absolute;
-    top: 20%;
-    left: -10%;
-    scale: .8;
-    z-index: 1;
-}
-.project-cards-container {
-    height: 100%;
-    width: 40%;
-    z-index: 2;
     border: 1px solid red;
-    position: relative;
-    left: 50%;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-
 }
-.cards {
-    border: 1px solid yellow;
-    background-color: var(--intro-bg);
-    z-index: 2;
-    grid-column: 1/7;
+.projectCard {
+    grid-column: span 3;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    
 }
-.cards h3 {
-    color: white;
+.projectCard img {
+    border-radius: 1rem;
 }
 /* Project Dark */
 .projects-dark {
     height: 100%;
     width: 100%;
     scroll-snap-align: center;
-    background-color: var(--intro-bg);
+    background-color: var(--landing-dark-bg);
+    background-size: cover;
     position: relative;
+    grid-column: 1 / 13;
+    grid-row: 1 / 13;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 2rem;
+    padding: 5rem;
+}
+.pCDark {
+    background: var(--opacity-bg-dark);
+    box-shadow:  7px 7px 7px #0c0c0c,
+    -7px -7px 7px #202020;
 }
 
 /* Project Light */
@@ -371,7 +370,20 @@ body {
     width: 100%;
     scroll-snap-align: center;
     background-color: white;
+    background-size: cover;
     position: relative;
+    grid-column: 1 / 13;
+    grid-row: 1 / 13;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 2rem;
+    padding: 5rem;
+}
+.pCLight {
+    background: var(--opacity-bg-light);
+    box-shadow:  5px 5px 13px #8c8c8c,
+    -5px -5px 13px #ffffff;
 }
 
 
