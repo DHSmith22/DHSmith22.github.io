@@ -4,11 +4,9 @@
     box-sizing: border-box;
     font-family: Inter Tight;
 }
-
 html {
     scroll-behavior: smooth;
 }
-
 :root {
     --intro-bg: #161616;
     --intro-h1: #FF9C40;
@@ -26,11 +24,16 @@ html {
     --opacity-bg-light: rgba(255, 255, 255, 0.25);
     --opacity-bg-dark: rgba(0, 0, 0, 0.25);
 }
-
 ::-webkit-scrollbar {
     display: none;
 }
-
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 300,
+  'GRAD' 0,
+  'opsz' 24;
+}
 body {
     width: 100vw;
     height: 100vh;
@@ -38,8 +41,6 @@ body {
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
 }
-
-
 .intro-container{
     background-color: var(--intro-bg);
     height: 100vh;
@@ -52,15 +53,13 @@ body {
     z-index: 10000;
     /* border: 1px solid red; */
 }
-
 /* Main Page */
-
 .hero-wrapper {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
+    transition: opacity 0.5s ease-in-out;
 }
-
 .sun {
     /* border: 1px solid red; */
     width: auto;
@@ -69,9 +68,7 @@ body {
     cursor: pointer;
     z-index: 1;
 }
-
 /* Landing Dark Mode */
-
 .landing-dark {
     background-color: var(--intro-bg);
     width: 100vw;
@@ -80,7 +77,6 @@ body {
     scroll-snap-align: center;
     border: 1px solid transparent;
 }
-
 .header-dark {
     width: 20vw;
     height: auto;
@@ -91,17 +87,14 @@ body {
     padding-top: 1rem;
     position: sticky;
 }
-
 .header-dark a {
     font-size: 1.5rem;
     text-decoration: none;
     color: var(--hero-dark-navText);
 }
-
 .header-dark img {
     cursor: pointer;
 }
-
 .asteroid-1-lg, .light-asteroid-1-lg {
     position: absolute;
     right: 35%;
@@ -109,7 +102,6 @@ body {
     scale: .8;
     animation: asteroid-bob-right 4s  ease-in-out infinite alternate;
 }
-
 .asteroid-1-md, .light-asteroid-1-md {
     position: absolute;
     top: 17%;
@@ -117,7 +109,6 @@ body {
     scale: .7;
     animation: asteroid-bob-left 2.5s ease-in-out infinite alternate;
 }
-
 .asteroid-1-sm, .light-asteroid-1-sm {
     position: absolute;
     top: 25%;
@@ -125,7 +116,6 @@ body {
     scale: .6;
     animation: asteroid-bob-right 1.5s  ease-in-out infinite alternate;
 }
-
 .asteroid-2-lg, .light-asteroid-2-lg {
     position: absolute;
     top: 32%;
@@ -133,7 +123,6 @@ body {
     animation: asteroid-bob-left 3.5s ease-in-out infinite alternate;
     z-index: 1;
 }
-
 .asteroid-2-md, .light-asteroid-2-md {
     position: absolute;
     top: 51%;
@@ -141,7 +130,6 @@ body {
     scale: .7;
     animation: asteroid-bob-vertical 1.5s ease-in-out infinite alternate;
 }
-
 .asteroid-2-covered, .light-asteroid-2-covered {
     position: absolute;
     scale: 2;
@@ -149,7 +137,6 @@ body {
     right: 32%;
     animation: asteroid-bob-right 2s ease-in-out infinite alternate;
 }
-
 .asteroid-3-lg, .light-asteroid-3-lg {
     position: absolute;
     bottom: 26%;
@@ -157,14 +144,12 @@ body {
     scale: 1.3;
     animation: asteroid-bob-left 3.8s ease-in-out infinite alternate;
 }
-
 .asteroid-3-sm, .light-asteroid-3-sm {
     position: absolute;
     bottom: 12%;
     right: 18%;
     animation: asteroid-bob-vertical 2s ease-in-out infinite alternate;
 }
-
 @keyframes asteroid-bob-right {
     0% {
         transform: translateY(-5%);
@@ -193,14 +178,12 @@ body {
         transform: translateY(10%);
     }
 }
-
 .arrow-dark {
     position: absolute;
     margin-left: 2rem;
     bottom: 2rem;
     scale: .8;
 }
-
 .greeter {
     /* border: 1px solid red; */
     width: 20rem;
@@ -212,21 +195,16 @@ body {
     display: flex;
     flex-direction: column;
 }
-
 .greeter h1, span {
     font-size: 4rem;
 }
-
 .greeter h1 {
     color: var(--intro-h1);
 }
-
 .greeter span, .greeter > h3{
     color: white;
     padding-top: .5rem;
 }
-
-
 .lang-logos {
     margin-top: 1rem;
     width: auto;
@@ -236,11 +214,9 @@ body {
     z-index: 1;
     gap: .5rem;
 }
-
 .lang-logos img {
     width: 3.5rem;
 }
-
 .dark-bg {
     position: absolute;
     height: 100%;
@@ -249,10 +225,7 @@ body {
     left: 32%;
     bottom: 28%;
 }
-
 /* End of Landing Dark Mode */
-
-
 /* Landing Light Mode */
 .landing-light{
     background-color: var(--landing-light-bg);
@@ -261,7 +234,6 @@ body {
     position: relative;
     border: 1px solid transparent;
 }
-
 .header-light {
     width: 20vw;
     height: auto;
@@ -272,14 +244,12 @@ body {
     padding-top: 1rem;
     position: sticky;
 }
-
 .header-light a {
     font-size: 1.5rem;
     text-decoration: none;
     color: var(--hero-light-navText);
     z-index: 1;
 }
-
 .arrow-light {
     position: absolute;
     margin-left: 2rem;
@@ -287,7 +257,6 @@ body {
     scale: .8;
     z-index: 1;
 }
-
 .greeter-light {
     /* border: 1px solid red; */
     width: 20rem;
@@ -299,22 +268,18 @@ body {
     flex-direction: column;
     z-index: 1;
 }
-
 .greeter-light h1, span {
     font-size: 4rem;
     z-index: 1;
 }
-
 .greeter-light h1 {
     color: var(--hero-light-h1);
 }
-
 .greeter-light span, h3{
     color: black;
     padding-top: .5rem;
     z-index: 1;
 }
-
 .light-bg {
     position: absolute;
     height: 100%;
@@ -323,24 +288,28 @@ body {
     left: 32%;
     bottom: 28%;
 }
-
 /* General Projects Page */
-
 .projects-page {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
-.projectCard {
-    grid-column: span 3;
+.projectCardContainer {
+    grid-column: 5 / 13;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
     
 }
+.projectCard {
+    height: 100%;
+    width: 100%;
+
+}
 .projectCard img {
-    border-radius: 1rem;
+    width: 50%;
+    height: 50%;
 }
 /* Project Dark */
 .projects-dark {
@@ -358,12 +327,6 @@ body {
     grid-gap: 2rem;
     padding: 5rem;
 }
-.pCDark {
-    background: var(--opacity-bg-dark);
-    box-shadow:  7px 7px 7px #0c0c0c,
-    -7px -7px 7px #202020;
-}
-
 /* Project Light */
 .projects-light {
     height: 100%;
@@ -380,19 +343,11 @@ body {
     grid-gap: 2rem;
     padding: 5rem;
 }
-.pCLight {
-    background: var(--opacity-bg-light);
-    box-shadow:  5px 5px 13px #8c8c8c,
-    -5px -5px 13px #ffffff;
-}
-
-
 /* Contact Page */
 .contact-page {
     height: 100vh;
     width: 100vw;
 }
-
 /* Tablet Formatting */
 @media screen and (max-width: 1280px) {
     .header-dark, .header-light {
@@ -405,7 +360,6 @@ body {
         padding: 1rem auto;
         margin: auto;
     }
-
     .header-dark a, .header-light a {
         font-size: 2rem;
         padding-left: 1rem;
@@ -427,24 +381,21 @@ body {
         top: 35%;
         scale: .6;
         animation: asteroid-bob-right 4s  ease-in-out infinite alternate;
-    }
-    
+    }    
     .asteroid-1-md, .light-asteroid-1-md {
         position: absolute;
         top: 45%;
         right: 15%;
         scale: .5;
         animation: asteroid-bob-left 2.5s ease-in-out infinite alternate;
-    }
-    
+    }   
     .asteroid-1-sm, .light-asteroid-1-sm {
         position: absolute;
         scale: .6;
         top: 44rem;
         right: 18rem;
         animation: asteroid-bob-right 1.5s  ease-in-out infinite alternate;
-    }
-    
+    }   
     .asteroid-2-lg, .light-asteroid-2-lg {
         position: absolute;
         top: 47rem;
@@ -452,32 +403,28 @@ body {
         animation: asteroid-bob-left 2.8s ease-in-out infinite alternate;
         scale: .7;
         z-index: 1;
-    }
-    
+    }   
     .asteroid-2-md, .light-asteroid-2-md {
         position: absolute;
         top: 49rem;
         right: 19rem;
         scale: .7;
         animation: asteroid-bob-vertical 1.5s ease-in-out infinite alternate;
-    }
-    
+    }  
     .asteroid-2-covered, .light-asteroid-2-covered {
         position: absolute;
         scale: 1;
         top: 54rem;
         right: 10rem;
         animation: asteroid-bob-right 2s ease-in-out infinite alternate;
-    }
-    
+    }   
     .asteroid-3-lg, .light-asteroid-3-lg {
         position: absolute;
         bottom: 5rem;
         right: 11rem;
         scale: .9;
         animation: asteroid-bob-left 3.8s ease-in-out infinite alternate;
-    }
-    
+    }  
     .asteroid-3-sm, .light-asteroid-3-sm {
         position: absolute;
         bottom: 8rem;
@@ -486,7 +433,6 @@ body {
     }
 }
 /* End of Tablet Formatting */
-
 /* Mobile Formatting */
 @media screen and (max-width: 480px) {
     .intro-container {
@@ -537,24 +483,21 @@ body {
         top: 2%;
         scale: .4;
         animation: asteroid-bob-right 4s  ease-in-out infinite alternate;
-    }
-    
+    } 
     .asteroid-1-md, .light-asteroid-1-md {
         position: absolute;
         top: 5%;
         right: 9%;
         scale: .2;
         animation: asteroid-bob-left 1.2s ease-in-out infinite alternate;
-    }
-    
+    } 
     .asteroid-1-sm, .light-asteroid-1-sm {
         position: absolute;
         scale: .6;
         top: 24%;
         right: 19%;
         animation: asteroid-bob-right 1.5s  ease-in-out infinite alternate;
-    }
-    
+    }  
     .asteroid-2-lg, .light-asteroid-2-lg {
         position: absolute;
         top: 65%;
@@ -562,35 +505,28 @@ body {
         scale: .6;
         animation: asteroid-bob-left 3.5s ease-in-out infinite alternate;
         z-index: 1;
-    }
-    
+    }  
     .asteroid-2-md, .light-asteroid-2-md {
         display: none;
-    }
-    
+    } 
     .asteroid-2-covered, .light-asteroid-2-covered {
         display: none;
-    }   
-    
+    }     
     .asteroid-3-lg, .light-asteroid-3-lg {
         display: none;
-    }
-    
+    }  
     .asteroid-3-sm, .light-asteroid-3-sm {
         top: 75%;
         right: 52%;
         scale: .6;
     }
 }
-
 /* Smallest width formatting */
 @media screen and (max-width: 355px){
     .greeter, .greeter-light {
         scale: clamp(.4, .8, .9);
     }
 }
-
-
 /* Hidden */
 .hidden {
     display: none;
@@ -598,7 +534,6 @@ body {
     width: 0px;
 }
 /* Hidden */
-
 /* Prevent Select */
 .prevent-select {
     user-select: none;

@@ -23,6 +23,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=open_in_new" />
 
 
     <link rel="shortcut icon" href="static/images/favicon.ico" type="image/x-icon">
@@ -41,7 +42,7 @@
 <main id="landing-page" class="hero-wrapper">
 
 <!-- Main Section Dark Mode -->
-  <section class="landing-dark ">
+  <section class="landing-dark">
 
 <!-- Asteroids -->
     <div class="asteroids">
@@ -72,7 +73,11 @@
         <div class="greeter">
             <h1>Hey<span>!</span></h1>
             <h1><span>I'm</span> Dorian</h1>
-            <h3>Junior Front-End Developer</h3>
+            <h3>Junior Front-End Developer
+                <a href="static/Dorian-Resume-2025.pdf" class="resumeButton">
+                    <span class="material-symbols-outlined">open_in_new</span>
+                </a>
+            </h3>
             <div class="lang-logos">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"/>
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
@@ -127,7 +132,11 @@
     <div class="greeter-light">
         <h1>Hey<span>!</span></h1>
         <h1><span>I'm</span> Dorian</h1>
-        <h3>Junior Front-End Developer</h3>
+        <h3>Junior Front-End Developer
+            <a href="static/Dorian-Resume-2025.pdf" class="resumeButton">
+                <span class="material-symbols-outlined" style="color: black;">open_in_new</span>
+            </a>
+        </h3>
         <div class="lang-logos">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"/>
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
@@ -146,46 +155,26 @@
 
 <!-- Projects Page Dark Mode-->
     <div class="projects-dark">
-        <section class="projectCard pCDark">
-            <img src="static/images/fine-eyewear.png" alt="An icon image of the fine eyewear website">
-            <a href="https://dhsmith22.github.io/web-dev-study/fine-eyewear-remodel/index.html">
-                <h1>Fine Eyewear Website</h1>
-            </a>
-            <article>
-                <p>A redesign of the existing Fine Eyewear website. Peruse a vast assortment of designer eyeglasses and sunglasses, alongside precise eye examinations.</p>
-                <p>HTML</p>
-                <p>CSS</p>
-                <p>JavaScript</p>
-            </article>
-        </section>
-        <section class="projectCard pCDark">
-
-        </section>
-        <section class="projectCard pCDark">
-
-        </section>
-        <section class="projectCard pCDark">
-
-        </section>
-        <section class="projectCard pCDark">
-
-        </section>
-
+        <div class="projectCardContainer pCDark">
+            <section class="projectCard">
+                <!-- <img src="static/images/fine-eyewear.png" alt="An icon image of the fine eyewear website"> -->
+                <a href="https://dhsmith22.github.io/web-dev-study/fine-eyewear-remodel/index.html">
+                    <h1>Fine Eyewear Website</h1>
+                </a>
+                <article>
+                    <p>A redesign of the existing Fine Eyewear website. Peruse a vast assortment of designer eyeglasses and sunglasses, alongside precise eye examinations.</p>
+                    <p>HTML</p>
+                    <p>CSS</p>
+                    <p>JavaScript</p>
+                </article>
+            </section>
+        </div>
     </div>
 
 <!--End of Projects Page Dark Mode-->
 
 <!-- Projects Page Light Mode-->
     <div class="projects-light hidden">
-        <section class="projectCard pCLight">
-
-        </section>
-        <section class="projectCard pCLight">
-
-        </section>
-        <section class="projectCard pCLight">
-
-        </section>
         <section class="projectCard pCLight">
 
         </section>
