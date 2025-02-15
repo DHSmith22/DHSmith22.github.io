@@ -316,9 +316,6 @@ body {
     padding: 1rem;
     /* border: 1px solid red; */
 }
-.projectCard:hover {
-
-}
 .projectCard h1,
 .projectCard p {
     grid-column: span 12;
