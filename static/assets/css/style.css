@@ -292,55 +292,94 @@ body {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
-    /* border: 1px solid red; */
-}
-.projectCardContainer {
-    grid-column: 5 / 13;
-    border-radius: 1rem;
     display: flex;
-    flex-direction: column;
-    
+    justify-content: center;
+    align-items: center;
+}
+.projectsContainer {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal halves */
+    grid-auto-rows: minmax(12.5rem, auto); /* Adjusts row height based on content */
+    gap: 2rem;
+    padding: 5rem;
+    overflow: auto;
+    /* border: 1px solid white; */
 }
 .projectCard {
     height: 100%;
     width: 100%;
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template: repeat(12, 1fr) / repeat(12, 1fr);
+    padding: 1rem;
+    /* border: 1px solid red; */
+}
+.projectCard:hover {
 
 }
-.projectCard img {
-    width: 50%;
-    height: 50%;
+.projectCard h1,
+.projectCard p {
+    grid-column: span 12;
+    /* border: 1px solid red; */
+}
+.projectCard p {
+    grid-row: 2;
+    font-size: 0.9rem;
+    text-decoration: underline;
+}
+.projectCard figure {
+    grid-area: 3 / 1 / 8 / 5;
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    max-height: 15vh;
+    /* border: 1px solid red; */
+    margin-top: .5rem;
+}
+.projectCard figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+.projectCard article {
+    grid-area: 3 / 5 / 12 / 13;
+    padding-left: 1rem;
+    /* border: 1px solid red; */
+}
+.projectCard article p {
+    text-decoration: none;
+    font-size: 1rem;
+    width: 100%;
+    height: 100%;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    padding-top: .5rem;
+}
+.projectCard span {
+    scale: 0.8;
 }
 /* Project Dark */
-.projects-dark {
-    height: 100%;
-    width: 100%;
-    scroll-snap-align: center;
-    background-color: var(--landing-dark-bg);
-    background-size: cover;
-    position: relative;
-    grid-column: 1 / 13;
-    grid-row: 1 / 13;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto;
-    grid-gap: 2rem;
-    padding: 5rem;
+.pCDark {
+    background: var(--landing-dark-bg);
+    color: white;
+}
+.projectCardDark {
+    border-left: 1px solid white;
+}
+.projectCardDark span{
+    color: var(--intro-h1)
 }
 /* Project Light */
-.projects-light {
-    height: 100%;
-    width: 100%;
-    scroll-snap-align: center;
-    background-color: white;
-    background-size: cover;
-    position: relative;
-    grid-column: 1 / 13;
-    grid-row: 1 / 13;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto;
-    grid-gap: 2rem;
-    padding: 5rem;
+.pCLight {
+    background-color: var(--landing-light-bg);
+}
+.projectCardLight {
+    background: var(--landing-light-bg);
+    border: 1px solid black;
+}
+.projectCardLight span {
+    color: var(--hero-light-h1);
 }
 /* Contact Page */
 .contact-page {

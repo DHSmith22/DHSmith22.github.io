@@ -71,8 +71,8 @@ document.addEventListener("DOMContentLoaded", function(){
 function toggleLight() {
     const heroDarkMode = document.querySelector('.landing-dark'); //defining the main darkmode landing page
     const heroLightMode = document.querySelector('.landing-light'); //defining the main lightmode landing page
-    const projectDarkMode = document.querySelector('.projects-dark'); //defining the main darkmode projects page
-    const projectLightMode = document.querySelector('.projects-light'); //defining the main darkmode projects page
+    const projectDarkMode = document.querySelector('.pCDark'); //defining the main darkmode projects page
+    const projectLightMode = document.querySelector('.pCLight'); //defining the main darkmode projects page
     
     heroDarkMode.classList.toggle('hidden'); // toggles the .hidden class 
     heroLightMode.classList.toggle('hidden'); // toggles the .hidden class 
