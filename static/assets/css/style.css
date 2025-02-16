@@ -85,13 +85,15 @@ body {
     height: auto;
     display: flex;
     justify-content: start;
+    align-items: center;
     gap: .5rem;
     margin-left: 3rem;
     padding-top: 1rem;
     position: sticky;
 }
 .header-dark a {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
+    padding-right: 1rem;
     text-decoration: none;
     color: var(--hero-dark-navText);
 }
@@ -248,7 +250,8 @@ body {
     position: sticky;
 }
 .header-light a {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
+    padding-right: 1rem;
     text-decoration: none;
     color: var(--hero-light-navText);
     z-index: 1;
@@ -308,6 +311,40 @@ body {
     justify-content: center;
     align-items: center;
     /* border: 1px solid red; */
+}
+.PCLBox {
+    height: 90%;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 1rem;
+    margin-left: 2rem;
+    /* border: 1px solid red; */
+}
+.PCLBox img{
+    grid-column: 1 / 1;
+    /* border: 1px solid red; */
+}
+.projNavButtons {
+    height: 100%;
+    width: 100%;
+    grid-column: 1;
+    grid-row: 3 / span 2;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-right: 1px solid white;
+    padding-right: 1rem;
+}
+.projNavButtons a {
+    text-decoration: none;
+    color: white;
+    transition: .2s ease-in-out all;
+}
+.projNavButtons a:hover ~ a{
+    opacity: .6;
 }
 .projectsContainer {
     height: 100%;
@@ -388,6 +425,12 @@ body {
 /* Project Light */
 .pCLight {
     background: var(--landing-light-bg);
+    color: black;
+}
+.pNBLight {
+    border-right: 1px solid black;
+}
+.pNBLight a{
     color: black;
 }
 .projectCardLight {
