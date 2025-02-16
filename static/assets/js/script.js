@@ -161,48 +161,39 @@ projects.forEach(card => {
     // section element
     const section = document.createElement('section');
     section.classList.add('projectCard', 'projectCardLight');
-
     // h1 element
     const h1 = document.createElement('h1');
     h1.textContent = card.title;
-
     // anchor element
     const anchor = document.createElement('a');
     anchor.href = card.link;
     anchor.target = '_blank';
-
     // span element
     const span = document.createElement('span');
     span.classList.add('material-symbols-outlined');
     span.textContent = card.icon;
-
     // Append span to anchor, and anchor to h1
     anchor.appendChild(span);
     h1.appendChild(anchor);
-
     // paragraph for technologies
     const techParagraph = document.createElement('p');
     techParagraph.textContent = card.technologies;
-
     // figure and img elements
     const figure = document.createElement('figure');
     const img = document.createElement('img');
     img.src = card.imageSrc;
     img.alt = card.imageAlt;
     figure.appendChild(img);
-
     // article and description paragraph
     const article = document.createElement('article');
     const descParagraph = document.createElement('p');
     descParagraph.textContent = card.description;
     article.appendChild(descParagraph);
-
     // Append all elements to section
     section.appendChild(h1);
     section.appendChild(techParagraph);
     section.appendChild(figure);
     section.appendChild(article);
-
     // Append section to the specified container
     if (containerLight) {
         containerLight.appendChild(section);

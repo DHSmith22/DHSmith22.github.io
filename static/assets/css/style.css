@@ -317,6 +317,7 @@ body {
     grid-auto-rows: minmax(12.5rem, auto); /* Adjusts row height based on content */
     gap: 2rem;
     padding: 5rem;
+    overflow: scroll;
     /* border: 1px solid white; */
 }
 .projectCard {
@@ -379,6 +380,7 @@ body {
 }
 .projectCard:hover {
     background: var(--hover-dark);
+    scale: 1.05;
 }
 .projectCardDark span{
     color: var(--intro-h1)
@@ -393,6 +395,7 @@ body {
 }
 .projectCardLight:hover {
     background: var(--hover-light);
+    scale: 1.05;
 }
 .projectCardLight span {
     color: var(--hero-light-h1);
