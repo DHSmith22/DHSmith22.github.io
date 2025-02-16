@@ -361,7 +361,7 @@ body {
     height: 100%;align-self: start;
     width: 100%;
     display: grid;
-    grid-template: repeat(12, 1fr) / repeat(12, 1fr);
+    grid-template: repeat(12, 1fr) / repeat(13, 1fr);
     padding: 1rem;
     /* border: 1px solid red; */
     transition: .2s ease-in-out all;
