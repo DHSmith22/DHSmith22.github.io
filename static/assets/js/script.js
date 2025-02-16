@@ -66,19 +66,29 @@ document.addEventListener("DOMContentLoaded", function(){
     }, 4250);
 });
 
-// Dark mode Toggle
+// Dark/light mode Toggle
 
 function toggleLight() {
-    const heroDarkMode = document.querySelector('.landing-dark'); //defining the main darkmode landing page
-    const heroLightMode = document.querySelector('.landing-light'); //defining the main lightmode landing page
-    const projectDarkMode = document.querySelector('.pCDark'); //defining the main darkmode projects page
-    const projectLightMode = document.querySelector('.pCLight'); //defining the main darkmode projects page
-    
-    heroDarkMode.classList.toggle('hidden'); // toggles the .hidden class 
-    heroLightMode.classList.toggle('hidden'); // toggles the .hidden class 
-    projectDarkMode.classList.toggle('hidden'); // toggles the .hidden class 
-    projectLightMode.classList.toggle('hidden'); // toggles the .hidden class 
+    const elementsToToggle = [
+        '.landing-dark',    // dark mode landing page
+        '.landing-light',   // light mode landing page
+        '.pCDark',          // dark mode projects page
+        '.pCLight',         // light mode projects page
+        '.pCLDark',         // dark mode left project page
+        '.pCLLight'         // light mode left project page
+    ];
+
+    elementsToToggle.forEach(arrayItem => {
+        const element = document.querySelector(arrayItem);
+        if (element) {
+            element.classList.toggle('hidden');
+            console.log(`Toggled ${arrayItem}:`, element.classList); // Log the class list after toggling
+        } else {
+            console.log(`Element not found for selector: ${arrayItem}`); // Log an error message if the element is not found
+        }
+    });
 }
+
 
 // Scroll Fading Effect
 
