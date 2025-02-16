@@ -373,7 +373,6 @@ body {
     opacity: 0.6;
 }
 .projectsContainer .projectCard:hover {
-    background: var(--hover-dark);
     scale: 1.05;
     opacity: 1; 
 }
@@ -425,6 +424,9 @@ body {
 }
 .projectCardDark {
     border-left: 1px solid white;
+}
+.projectCardDark:hover {
+    background: var(--hover-dark);
 }
 .projectCardDark span{
     color: var(--intro-h1)
