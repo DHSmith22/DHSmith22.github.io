@@ -343,8 +343,11 @@ body {
     color: white;
     transition: .2s ease-in-out all;
 }
-.projNavButtons a:hover ~ a{
+.projNavButtons:hover a{
     opacity: .6;
+}
+.projNavButtons a:hover{
+    opacity: 1;
 }
 .projectsContainer {
     height: 100%;
@@ -365,6 +368,14 @@ body {
     padding: 1rem;
     /* border: 1px solid red; */
     transition: .2s ease-in-out all;
+}
+.projectsContainer:hover .projectCard {
+    opacity: 0.6;
+}
+.projectsContainer .projectCard:hover {
+    background: var(--hover-dark);
+    scale: 1.05;
+    opacity: 1; 
 }
 .projectCard h1,
 .projectCard p {
@@ -414,10 +425,6 @@ body {
 }
 .projectCardDark {
     border-left: 1px solid white;
-}
-.projectCard:hover {
-    background: var(--hover-dark);
-    scale: 1.05;
 }
 .projectCardDark span{
     color: var(--intro-h1)
