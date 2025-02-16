@@ -21,6 +21,9 @@ html {
     --landing-dark-bg: #161616;
     --landing-light-bg: white;
 
+    --hover-dark: #242424;
+    --hover-light: rgb(233, 233, 233);
+
     --opacity-bg-light: rgba(255, 255, 255, 0.25);
     --opacity-bg-dark: rgba(0, 0, 0, 0.25);
 }
@@ -322,6 +325,7 @@ body {
     grid-template: repeat(12, 1fr) / repeat(12, 1fr);
     padding: 1rem;
     /* border: 1px solid red; */
+    transition: .2s ease-in-out all;
 }
 .projectCard h1,
 .projectCard p {
@@ -372,6 +376,9 @@ body {
 .projectCardDark {
     border-left: 1px solid white;
 }
+.projectCard:hover {
+    background: var(--hover-dark);
+}
 .projectCardDark span{
     color: var(--intro-h1)
 }
@@ -383,6 +390,9 @@ body {
 .projectCardLight {
     border-left: 1px solid black;
 }
+.projectCardLight:hover {
+    background: var(--hover-light);
+}
 .projectCardLight span {
     color: var(--hero-light-h1);
 }
@@ -390,6 +400,16 @@ body {
 .contact-page {
     height: 100vh;
     width: 100vw;
+}
+.contact-dark {
+    height: 100%;
+    width: 100%;
+    background: var(--landing-dark-bg);
+}
+.contact-light {
+    height: 100%;
+    width: 100%;
+    background: var(--landing-light-bg);
 }
 /* Tablet Formatting */
 @media screen and (max-width: 1280px) {

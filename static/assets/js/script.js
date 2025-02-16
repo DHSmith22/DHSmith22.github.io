@@ -70,12 +70,14 @@ document.addEventListener("DOMContentLoaded", function(){
 
 function toggleLight() {
     const elementsToToggle = [
-        '.landing-dark',    // dark mode landing page
-        '.landing-light',   // light mode landing page
-        '.pCDark',          // dark mode projects page
-        '.pCLight',         // light mode projects page
-        '.pCLDark',         // dark mode left project page
-        '.pCLLight'         // light mode left project page
+        '.landing-dark',        // dark mode landing page
+        '.landing-light',       // light mode landing page
+        '.pCDark',              // dark mode projects page
+        '.pCLight',             // light mode projects page
+        '.pCLDark',             // dark mode left project page
+        '.pCLLight',            // light mode left project page
+        '.contact-dark',        // dark mode of contact page
+        '.contact-light',       // light mode of contact page
     ];
 
     elementsToToggle.forEach(arrayItem => {
