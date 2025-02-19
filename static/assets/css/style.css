@@ -361,7 +361,8 @@ body {
     /* border: 1px solid white; */
 }
 .projectCard {
-    height: 100%;align-self: start;
+    height: 100%;
+    align-self: start;
     width: 100%;
     display: grid;
     grid-template: repeat(12, 1fr) / repeat(13, 1fr);
