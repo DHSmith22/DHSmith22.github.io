@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function(){
     const contactPage = document.querySelector('.contact-page');
     const NavBar = document.querySelector('.navContainer');
 
+
     setTimeout(() => {
         projectsPage.classList.add('hidden');
         contactPage.classList.add('hidden');
@@ -52,6 +53,7 @@ document.addEventListener("DOMContentLoaded", function(){
     }, 2500);
     setTimeout(() => {
         introWrapperText.style.scale = '1.5';
+        NavBar.classList.remove('hidden');
     }, 2600);
     setTimeout(() => {
         introWrapperText.style.scale = '1'
@@ -61,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function(){
     }, 3500);
     setTimeout(() => {
         NavBar.style.opacity = 1;
-    }, 3750);
+    }, 3650);
     setTimeout(() => {
         introContainer.classList.add('hidden');
     }, 4000);
