@@ -1,0 +1,94 @@
+/* Asteroid Animations */
+.asteroids {
+    z-index: var(--z-index-animations);
+}
+.asteroid-1-lg, .light-asteroid-1-lg {
+    position: absolute;
+    right: 35%;
+    top: -1%;
+    scale: .8;
+    animation: asteroid-bob-right 4s  ease-in-out infinite alternate;
+    z-index: inherit;
+}
+.asteroid-1-md, .light-asteroid-1-md {
+    position: absolute;
+    top: 17%;
+    right: 34%;
+    scale: .7;
+    animation: asteroid-bob-left 2.5s ease-in-out infinite alternate;
+    z-index: inherit;
+}
+.asteroid-1-sm, .light-asteroid-1-sm {
+    position: absolute;
+    top: 25%;
+    right: 42%;
+    scale: .6;
+    animation: asteroid-bob-right 1.5s  ease-in-out infinite alternate;
+    z-index: inherit;
+}
+.asteroid-2-lg, .light-asteroid-2-lg {
+    position: absolute;
+    top: 32%;
+    right: 34%;
+    animation: asteroid-bob-left 3.5s ease-in-out infinite alternate;
+    z-index: var(--z-index-float-anim);
+}
+.asteroid-2-md, .light-asteroid-2-md {
+    position: absolute;
+    top: 51%;
+    right: 39%;
+    scale: .7;
+    animation: asteroid-bob-vertical 1.5s ease-in-out infinite alternate;
+    z-index: inherit;
+}
+.asteroid-2-covered, .light-asteroid-2-covered {
+    position: absolute;
+    scale: 2;
+    top: 57%;
+    right: 32%;
+    animation: asteroid-bob-right 2s ease-in-out infinite alternate;
+    z-index: inherit;
+}
+.asteroid-3-lg, .light-asteroid-3-lg {
+    position: absolute;
+    bottom: 26%;
+    right: 21%;
+    scale: 1.3;
+    animation: asteroid-bob-left 3.8s ease-in-out infinite alternate;
+    z-index: inherit;
+}
+.asteroid-3-sm, .light-asteroid-3-sm {
+    position: absolute;
+    bottom: 12%;
+    right: 18%;
+    animation: asteroid-bob-vertical 2s ease-in-out infinite alternate;
+    z-index: inherit;
+}
+@keyframes asteroid-bob-right {
+    0% {
+        transform: translateY(-5%);
+        transform: translateX(-10%);
+    }
+    100%{
+        transform: translateY(5%);
+        rotate: 4deg;
+    }
+}
+@keyframes asteroid-bob-left {
+    0% {
+        transform: translateY(-5%);
+        transform: translateX(-10%);
+    }
+    100%{
+        transform: translateY(5%);
+        rotate: -4deg;
+    }
+}
+@keyframes asteroid-bob-vertical {
+    0% {
+        transform: translateY(-10%);
+    }
+    100%{
+        transform: translateY(10%);
+    }
+}
