@@ -93,6 +93,7 @@ body {
     z-index: var(--z-index-nav);
     left: 0;
     top: 0;
+    transition: .2s ease-in-out all;
 }
 .nCBox {
     height: 90%;

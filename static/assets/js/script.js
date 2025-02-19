@@ -4,11 +4,13 @@ document.addEventListener("DOMContentLoaded", function(){
     const heroWrapper = document.querySelector('.hero-wrapper');
     const projectsPage = document.querySelector('.projects-page');
     const contactPage = document.querySelector('.contact-page');
+    const NavBar = document.querySelector('.navContainer');
 
     setTimeout(() => {
         projectsPage.classList.add('hidden');
         contactPage.classList.add('hidden');
         heroWrapper.classList.add('hidden');
+        NavBar.style.opacity = 0;
         introWrapperText.style.transition = '.35s';
         introWrapperText.innerHTML="Hej";
     }, 500);
@@ -57,6 +59,9 @@ document.addEventListener("DOMContentLoaded", function(){
         heroWrapper.classList.remove('hidden');
         heroWrapper.scrollIntoView({behavior: 'smooth'});
     }, 3500);
+    setTimeout(() => {
+        NavBar.style.opacity = 1;
+    }, 3750);
     setTimeout(() => {
         introContainer.classList.add('hidden');
     }, 4000);
