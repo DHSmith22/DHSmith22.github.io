@@ -145,8 +145,8 @@ body {
     aspect-ratio: 1;
     z-index: 1;
     position: absolute;
-    top: 15%;
-    left: 12%;
+    top: 22.5%;
+    left: 17.5%;
     display: flex;
     flex-direction: column;
     z-index: var(--z-index-standard);
