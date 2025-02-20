@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function(){
         contactPage.classList.add('hidden');
         heroWrapper.classList.add('hidden');
         NavBar.style.opacity = 0;
+        NavBar.style.width = '0%';
         introWrapperText.style.transition = '.35s';
         introWrapperText.innerHTML="Hej";
     }, 500);
@@ -63,6 +64,7 @@ document.addEventListener("DOMContentLoaded", function(){
     }, 3500);
     setTimeout(() => {
         NavBar.style.opacity = 1;
+        NavBar.style.width = '10%';
     }, 3650);
     setTimeout(() => {
         introContainer.classList.add('hidden');
