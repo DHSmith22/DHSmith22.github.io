@@ -97,7 +97,7 @@ function toggleLight() {
             element.classList.toggle('hidden');
             console.log(`Toggled ${arrayItem}:`, element.classList); // Log the class list after toggling
         } else {
-            console.log(`Element not found for selector: ${arrayItem}`); // Log an error message if the element is not found
+            console.log(`Element not found for selector: ${arrayItem}`); // Log an error message if the element isn't found
         }
     });
 }
@@ -120,6 +120,15 @@ const projects = [
         imageSrc: 'static/images/webDevRepo.png',
         imageAlt: 'An icon image of the JavaScript Mini-Project Series',
         description: 'A GitHub repository dedicated to hosting all the minor projects I create as I learn Web Development.'
+    },
+    {
+        title: 'KeystoneUI',
+        link: 'https://dhsmith22.github.io/keystone-ui',
+        icon: 'open_in_new',
+        technologies: 'HTML CSS JS',
+        imageSrc: 'static/images/webDevRepo.png',
+        imageAlt: 'An icon image of a website utilizing KeystoneUI styling',
+        description: 'KeystoneUI is a lightweight, modern boilerplate for HTML, CSS, and JavaScript. Sleek, precise, flexible; built for simplicity and fast development.'
     }
 ];
 // DARK MODE PROJECT CARDS
