@@ -105,7 +105,7 @@ function toggleLight() {
 const projects = [
     {
         title: 'Fine Eyewear Remodel Website',
-        link: 'https://dhsmith22.github.io/fine-eyewear-remodel',
+        link: 'https://github.com/DHSmith22/web-dev-study/tree/main/fine-eyewear-remodel',
         icon: 'open_in_new',
         technologies: 'HTML CSS JS',
         imageSrc: 'static/images/fine-eyewear.png',
@@ -114,7 +114,7 @@ const projects = [
     },
     {
         title: 'JavaScript Mini-Project Series',
-        link: 'https://dhsmith22.github.io/web-dev-study',
+        link: 'https://github.com/DHSmith22/web-dev-study/tree/main/javascript-study-sessions',
         icon: 'open_in_new',
         technologies: 'HTML CSS JS',
         imageSrc: 'static/images/webDevRepo.png',
@@ -123,7 +123,7 @@ const projects = [
     },
     {
         title: 'KeystoneUI',
-        link: 'https://dhsmith22.github.io/keystone-ui',
+        link: 'https://dhsmith22.github.io/KeystoneUI',
         icon: 'open_in_new',
         technologies: 'HTML CSS JS',
         imageSrc: 'static/images/webDevRepo.png',
